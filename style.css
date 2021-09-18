@@ -99,8 +99,7 @@ video {
   backdrop-filter: blur(10px);
 }
 
-.container2:hover,
-.container:hover {
+.container2:hover {
   transform: scale(1.1);
 }
 
