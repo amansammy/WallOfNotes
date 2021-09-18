@@ -1,0 +1,394 @@
+/* Boilerplate start */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: #f9f9f9;
+  color: #000;
+}
+
+body {
+  font-size: 1.4em;
+  text-rendering: optimizeLegibility;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+ul,
+ol,
+dl {
+  margin: 0;
+}
+
+article,
+aside,
+audio,
+footer,
+header,
+nav,
+section,
+video {
+  display: block;
+}
+
+/* Boilerplate end */
+
+.outer {
+  height: 100vh;
+  animation: transitionIn 0.75s;
+}
+
+.banner {
+  margin-top: 40px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner img {
+  min-width: 300px;
+  align-self: center;
+}
+
+.notes {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 50px;
+}
+
+.container {
+  text-align: center;
+  min-width: 320px;
+  width: 22%;
+  background: white;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+  transition: transform 0.2s;
+  overflow: hidden;
+  animation: transitionIn 3s;
+}
+
+.container2 {
+  min-width: 320px;
+  width: 22%;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+  box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  overflow: hidden;
+  animation: transitionIn 0.75s;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+}
+
+.container2:hover,
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container:hover > .noteLabel {
+  color: black;
+}
+
+.noteLabel {
+  font-size: small;
+  font-weight: 700;
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  text-align: left;
+  letter-spacing: 2px;
+  color: rgb(129, 129, 129);
+}
+
+.limit {
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+/* .container form input[type="text"] {
+  position: absolute;
+  display: block;
+  width: 90%;
+  padding: 20px 10px;
+  line-height: 610%;
+  margin: 2px auto;
+  border-radius: 5px;
+  border: 1px solid;
+  top: 30px;
+  left: 0;
+  right: 0;
+} */
+
+textarea {
+  font-family: "Poppins";
+  font-size: small;
+  padding: 10px;
+  color: black;
+  position: absolute;
+  resize: none;
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(167, 167, 167);
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgb(252, 252, 252) 100%
+  );
+}
+
+.container form input:active {
+  border: none;
+}
+
+.colors {
+  width: 50%;
+  height: 30px;
+  position: absolute;
+  bottom: 7px;
+  left: 25px;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.textDec {
+  width: 30%;
+  height: 30px;
+  position: absolute;
+  bottom: 7px;
+  right: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.whiteColor {
+  background: rgb(247, 247, 247);
+  border: 1px solid rgb(218, 218, 218);
+  box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+
+.violetColor {
+  background: rgb(209, 19, 209);
+  color: white;
+  border: 1px solid rgb(75, 39, 75);
+  box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+
+.indigoColor {
+  background: indigo;
+  color: white;
+  border: 1px solid rgb(70, 17, 83);
+}
+
+.blueColor {
+  background: rgb(0, 110, 255);
+  color: white;
+  border: 1px solid rgb(35, 84, 139);
+}
+
+.greenColor {
+  background: rgb(103, 216, 37);
+  color: white;
+  border: 1px solid rgb(39, 134, 63);
+}
+
+.yellowColor {
+  background: rgb(240, 240, 47);
+  border: 1px solid rgb(209, 206, 19);
+}
+
+.orangeColor {
+  background: orange;
+  border: 1px solid rgb(207, 143, 4);
+}
+
+.redColor {
+  background: rgb(241, 55, 55);
+  color: white;
+  border: 1px solid rgb(126, 23, 23);
+}
+
+.boldDec {
+  font-weight: 700;
+}
+
+.italicDec {
+  font-style: italic;
+}
+
+.lineThruDec {
+  text-decoration: line-through;
+}
+
+.image {
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  min-height: 15px;
+  background-size: contain;
+  background-position: center center;
+  display: inline-block;
+  opacity: 40%;
+}
+
+.image:hover {
+  opacity: 100%;
+}
+
+.radio-img input[type="radio"],
+.check-img input[type="checkbox"] {
+  display: none;
+}
+
+.radio-img .image,
+.check-img .image {
+  cursor: pointer;
+}
+
+.radio-img input[type="radio"]:checked + .image,
+.check-img input[type="checkbox"]:checked + .image {
+  opacity: 100%;
+}
+
+.check-img input.bold[type="checkbox"]:checked + .image {
+  background-image: url(imgs/boldChk.png) !important;
+}
+
+.radio-img input.white[type="radio"]:checked + .image {
+  background-image: url(imgs/whiteChk.png) !important;
+}
+
+.radio-img input.violet[type="radio"]:checked + .image {
+  background-image: url(imgs/violetChk.png) !important;
+}
+
+.radio-img input.indigo[type="radio"]:checked + .image {
+  background-image: url(imgs/indigoChk.png) !important;
+}
+
+.radio-img input.blue[type="radio"]:checked + .image {
+  background-image: url(imgs/blueChk.png) !important;
+}
+
+.radio-img input.green[type="radio"]:checked + .image {
+  background-image: url(imgs/greenChk.png) !important;
+}
+
+.radio-img input.yellow[type="radio"]:checked + .image {
+  background-image: url(imgs/yellowChk.png) !important;
+}
+
+.radio-img input.orange[type="radio"]:checked + .image {
+  background-image: url(imgs/orangeChk.png) !important;
+}
+
+.radio-img input.red[type="radio"]:checked + .image {
+  background-image: url(imgs/redChk.png) !important;
+}
+
+.noteText {
+  text-align: left;
+  padding: 20px;
+  font-size: medium;
+}
+
+.violetFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(162, 29, 214, 0.438) 100%
+  );
+}
+
+.indigoFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(105, 7, 233, 0.267) 100%
+  );
+}
+
+.blueFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(12, 91, 238, 0.438) 100%
+  );
+}
+
+.greenFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(14, 241, 116, 0.438) 100%
+  );
+}
+
+.yellowFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(221, 243, 18, 0.438) 100%
+  );
+}
+
+.redFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(255, 17, 28, 0.288) 100%
+  );
+}
+
+.orangeFocus {
+  background: linear-gradient(
+    0deg,
+    rgb(241, 241, 241) 0%,
+    rgba(255, 124, 2, 0.438) 100%
+  );
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
