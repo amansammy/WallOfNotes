@@ -94,7 +94,10 @@ const genTemplate = (note, color) => {
                     </div>`;
   console.log(htmltext);
   notes2.innerHTML = notes2.innerHTML + htmltext; */
-  const col = "white";
+
+  var boldCheck = false;
+  var italicCheck = false;
+  var lineThroughCheck = false;
 
   const div = document.createElement("div");
   const text = document.createTextNode(`${note}`);
@@ -121,20 +124,36 @@ const genTemplate = (note, color) => {
   if (bold.checked == true) {
     console.log("checked");
     div.classList.add("boldDec");
+    boldCheck = true;
   }
   if (italic.checked == true) {
     div.classList.add("italicDec");
-  }
-  if (linethru.checked == true) {
-    div.classList.add("lineThruDec");
+    italicCheck = true;
   }
 
+  if (linethru.checked == true) {
+    div.classList.add("lineThruDec");
+    lineThroughCheck = true;
+  }
   div.classList.add("blur");
 
   console.log(color);
   div.appendChild(text);
   console.log(div);
-  notes.append(div);
+  notes.prepend(div);
 
-  window.scrollTo(0, document.body.scrollHeight);
+  const docData = {
+    note: note,
+    color: color,
+    bold: boldCheck,
+    italic: italicCheck,
+    lineThrough: lineThroughCheck,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+  };
+
+  db.collection("notes")
+    .doc()
+    .set(docData)
+    .then(() => console.log("success"))
+    .catch((err) => console.log(err));
 };
