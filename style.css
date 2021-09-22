@@ -70,7 +70,7 @@ video {
 
 .container {
   text-align: center;
-  margin: 20px auto;
+  margin: 20px auto; /*added centre to container */
   min-width: 320px;
   width: 22%;
   background: white;
